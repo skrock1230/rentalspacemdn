@@ -1,0 +1,612 @@
+@charset "utf-8";
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Noto Sans JP', 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    display: block;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* END Reset CSS */
+
+
+/* 共通部分 */
+  .sp-only {
+    display: none;
+  }
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  li {
+    list-style: none;
+  }
+  .logo {
+    max-width: 250px;
+  } 
+  .btn {
+    width: 200px;
+    height: 60px;
+    margin: 0 auto;
+    line-height: 60px;
+    background: #6699ff;
+    border-radius: 5px;
+  }
+  .btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+  }
+  .btn a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .h3-title {
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    line-height: 37px;
+    z-index: -100;
+  }
+  .h3-title::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    margin-left: -20px;
+    background: #a5d1ff;
+    transform: rotate(45deg);
+    z-index: -100;
+  }
+  .h3-sup {
+    margin: 20px 0;
+    line-height: 22px;
+    color: #85a7cc;
+    font-weight: bold;
+  }
+  h4 {
+    margin-bottom: 20px;
+  }
+  
+  /* ヘッダー */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  header .container {
+    margin: 9px;
+  }
+  .header-area {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pc-only {
+    display: block;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    margin: 0;
+  }
+  header nav ul li {
+    width: 120px;
+  }
+  header nav ul li a {
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  header nav ul li a:hover {
+    color: #85a7cc;
+  }
+  
+  /* メイン画像エリア */
+  #key-visual {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #key-visual h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 0.2em;
+    text-shadow: 0px 0px 3px #333;
+  }
+
+  /* インフォメーションエリア */
+  #info {
+    padding: 60px 0;
+    background-color: #85a7cc;
+  }
+  .info-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info-area img {
+    width: 570px;
+  }
+  .info-area p {
+    text-align: left;
+  }
+  .info-contents {
+    width: 570px;
+    /* height: 200px; */
+    color: #fff;
+  }
+  .info-contents h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+  .info-contents p {
+    margin-bottom: 24px;
+  }
+
+  /* サービス案内エリア */
+  .service-contents {
+    margin-bottom: 20px;
+  }
+  .service-items {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .service-item {
+    width: 25%;
+    margin: 5px;
+    padding: 20px;
+    border: 3px solid #527acc;
+    border-radius: 10px;
+  }
+  .service-item img {
+    width: 123px;
+    height: 123px;
+    margin-bottom: 24px;
+  }
+  .service-item p {
+    text-align: left;
+  }
+
+  /* プラン紹介エリア */
+  #plan {
+    background-color: #f0f0f0;
+  }
+  .plan-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+    margin-bottom: 15px;
+    padding: 0 14px 30px 14px;
+  }
+  .plan-item {
+    width: 360px;
+  }
+  .plan-item img {
+    width: 100%;
+  }
+  .plan-item h4 {
+    margin-top: 24px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid  #527acc;
+  }
+  .plan-item-contents {
+    padding: 0 15px 40px 15px;
+  }
+  .h4-sup,
+  .plan-list {
+    text-align: left;
+  }
+  .h4-sup {
+    margin-bottom: 23px;
+  }
+  .plan-list {
+    margin-bottom: 15px;
+  }
+  .plan-list li::before {
+    content: "";
+    background: url(images/list-marker.svg) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 3px;
+  }
+  .plan-price {
+    border: 2px solid  #527acc;
+    line-height: 50px;
+  }
+
+  /* アクセスエリア */
+  #access {
+    padding-bottom: 0;
+  }
+  .access-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 150px;
+  }
+  .access-contents p {
+    margin-bottom: 23px;
+    text-align: left;
+  }
+  .txt-lead {
+    font-weight: bold;
+  }
+  .access-contents img {
+    display: block;
+    max-width: 280px;
+    max-height: 280px;
+    margin: 10px auto 30px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .map-area {
+    position: relative;
+    padding-top: 30%;
+  }
+  .access-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .page-top {
+    height: 53px;
+    padding: 15px;
+    background-color: #f0f0f0;
+  }
+  .page-top a {
+    float: right;
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+  }
+  .page-top a:hover {
+    color: #000;
+  }
+  .page-top a::after {
+    content: "";
+    background: url(images/list-marker.svg) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 3px;
+    transform: rotate(-90deg);
+  }
+
+  /* フッター */
+  footer {
+    padding-top: 40px;
+    color: #fff;
+    background-color: #596680;
+    text-align: center;
+  }
+  .footer-inner {
+    margin: 38px auto;
+  }
+  footer .logo {
+    margin-bottom: 17px;
+  } 
+  .footer-txt {
+    margin-bottom: 23px;
+    line-height: 23px;
+  }
+  footer .tel {
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 37px;
+    letter-spacing: 0.1em;
+  }
+  .footer-copy {
+    height: 38px;
+  }
+  footer small {
+    display: block;
+    line-height: 38px;
+    background-color: #333;
+    color: #ccc;
+    font-size: 12px;
+  }
+
+  @media (max-width: 767px) {
+
+    /* 共通部分 */
+    .sp-only {
+      display: block;
+    }
+    .logo {
+      width: 200px;
+      height: 60px;
+    }
+
+    /* ヘッダー */
+    .pc-only {
+      display: none;
+    }
+
+    /* ハンバーガーメニュー */
+    .gnav-toggle {
+      position: relative;
+      margin-top: 12px;
+    }
+    .gnav-hidden {
+      display: none;
+    }
+    #gnav-open {
+      display: inline-block;
+      width: 30px;
+      height: 22px;
+      vertical-align: middle;
+    }
+    #gnav-open span,
+    #gnav-open span::before,
+    #gnav-open span::after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      border-radius: 3px;
+      background: #555;
+      cursor: pointer;
+    }
+    #gnav-open span::before {
+      bottom: -8px;
+    }
+    #gnav-open span::after {
+      bottom: -16px;
+    }
+    #gnav-close {
+      display: none;
+      position: fixed;
+      z-index: 90;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+    #gnav-input:checked ~ #gnav-close {
+      display: block;
+      opacity: 0.5;
+    }
+    #gnav-input:checked ~ #gnav-content {
+      transform: translateX(0%);
+      box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+    }
+    #gnav-content {
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 300;
+      width: 70%;
+      max-width: 300px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      transition: 0.3s ease-in-out;
+      transform: translateX(-105%);
+    }
+    .gnav-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+      text-transform: uppercase;
+    }
+    .gnav-item {
+      border-bottom: 2px dotted #eee;
+      margin: 10px;
+      padding-bottom: 20px;
+    }
+    .gnav-item a {
+      display: block;
+      width: 200px;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+    }
+    .gnav-item a::first-line {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+
+    /* メイン画像エリア */
+    #key-visual {
+      height: 100vh;
+    }
+
+    /* インフォメーションエリア */
+    .info-area {
+      flex-direction: column-reverse;
+    }
+    .info-area img,
+    .info-contents {
+      width: 100%;
+    }
+
+    /* サービスエリア */
+    .service-items {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .service-item {
+      flex: 40%;
+    }
+
+    /* プランエリア */
+    #plan .wrapper {
+      padding: 0;
+    }
+    .plan-items {
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-item {
+      width: 100%;
+      background: #fff;
+    }
+
+    /* アクセスエリア */
+    .access-contents {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+    #access .box {
+      width: 100%;
+    }
+    .access-contents p {
+      margin-bottom: 0;
+    }
+    .access-contents img {
+      margin: 20px auto 0;
+  }
+    .map-area {
+      margin-top: 30px;
+      padding-top: 100%;
+    }
+    .tel a {
+      display: inline-block;
+    }
+
+  }
